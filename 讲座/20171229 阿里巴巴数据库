@@ -1,0 +1,34 @@
+* 异地多活 -> 全球化部署
+* 存储——效率和成本
+	* 数据量大
+	* 冷热分离
+* 数据库里程碑
+	* 关系型数据库
+		* Mysql/Oracle
+	* 分布式NoSQL
+		* Google BigTable、Apache Hbase
+		* Facebook Cassandra、Amazon DynamoDB
+		* MongoDB
+	* 现代化数据库
+		* Google Spanner、微软 Hekaton、SAP HANA
+		* 慕尼黑工业大学 HyPer、VoltDB(Stonebraker创业产品)
+* 现代化数据库理论基础
+	* OLTP Through the Looking Glass, and What We Found There
+	* 	By Stavros Harizopoulos, Daniel J. Abadi, Samuel Madden, Michael Stonebraker
+	*  真正用于数据库的指令太少
+	*  像是重构啊
+*  Batching & Pipelining 
+	* 论文Tuning paxos for high-throughput with batching and pipelining
+* 研究和挑战
+	* 多核
+	* 异构
+	* NVRAM
+	* 高性能网络
+	* Hybrid transactional/analytical processing
+	* 和机器学习结合
+* 综述paper
+	* Andrew Pavlo. What's Really New with NewSQL
+	* Hao Zhang. In-Memory Big Data Management and Processing: A Survey 
+
+
+
