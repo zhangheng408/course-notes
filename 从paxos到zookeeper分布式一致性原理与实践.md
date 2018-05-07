@@ -76,7 +76,37 @@
   * KeepLive
     * 和心跳类似啊
 * Hypertable
-  * Master 
-  * Hyperspace集群，一个Active Server，多个Standby Server
+  * Master
+    * 元数据管理，创建表、删除表
+    * 检测RangeServer
+  * Hyperspace
+    * 保证数据一致性，主要是存元数据及文件锁
+    * 集群，一个Active Server，多个Standby Server
+    * 选举时选事务日志最新的，减少冲突
+    * 事务处理时需要多数写入成功
   * RangeServer
+    * 表都按主键划分区间形成range
   * DFS Broker
+    * 底层存储接口，可以介入HDFS、Ceph等
+
+#### Zookeeper与Paxos
+
+- zookeeper简介
+  - zookeeper保证的分布式一致性特性
+    - 顺序一致性
+    - 原子性
+    - 单一视图 Single System Image
+    - 持久性
+    - 实时性：具体数字多少？
+  - 一些特点
+    - 数据全部放在内存中，保证高效
+    - 数据模型和目录很像
+- Zookeeper集群角色
+  - Leader 只有一个，提供读写操作
+  - Follower 提供读，参与选举和写过半策略
+  - Observer 提供读
+- Session
+  - sessionTimeout，客户端与服务器端TCP长连接的超时时间
+- 数据节点Znode
+  - 存在持久节点和临时节点
+  - 临时结点生命周期和session绑定
