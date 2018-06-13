@@ -1,0 +1,29 @@
+- SIMD
+  - 例子
+  - MMX
+    - 1996年从奔腾开始
+    - 57条指令
+    - 64比特寄存器borrowed from FP
+  - SSE~SSE4
+    - 1999年从奔腾3
+    - 128比特寄存器
+  - AVX~AVX2
+    - 2011年从sandy bridge
+    - 256/512比特
+  - 无法进行有条件处理
+  - 数据并行的粒度有限，无法无限扩充ISA
+- GPU
+  - GPU性能
+    - 单精很厉害 5TFLOP，CPU 750GFLOP
+    - 双精也就那样 1.5TFLOP，CPU 300GFLOP
+    - 内存带宽贼高 300GB/s，CPU是60GB/s
+      - PCIE gen3 8GB/s
+  - GPU结构
+    - TPC-Thread Processing Cluster
+      - 包含多个Streaming Multiprocessor和Texture Fetch
+    - SM-Streaming Multiprocessor
+      - 包含共享存储、L1 cache、L2 cache等
+      - 包含多个Stream Processor
+      - TF和蓝色cache是什么？
+    - SP-Stream Processor
+      - 里面的结构不清楚

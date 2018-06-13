@@ -1,0 +1,15 @@
+-  Nvdia P100 (2016)
+  - 10T FP32，5T FP64
+  - 1480MHz动态频率
+  - 16G 显存，4096位宽
+  - 300w，~10k$
+- SIMT-Single Instruction Multiple Threads
+  - 多线程掩藏访存延时
+  - GPU支持超长流水线
+  - 更高效的多线程切换
+  - 多物理寄存器堆，物理多线程
+  - 访存位宽较宽(256~4096位)，长延时
+- CUDA编程模型
+  - Thead：线程私有，本地存储
+  - Thread Block：
+  - Grid
